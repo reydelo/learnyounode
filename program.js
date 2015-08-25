@@ -121,7 +121,7 @@ function getResponses(count, url) {
     response.on('end', function() {
       responses[count] = string;
       completedRequests ++;
-      if(completedRequests >= 3){
+      if(completedRequests == urls.length){
         for(var i in responses){
           console.log(responses[i]);
         }
